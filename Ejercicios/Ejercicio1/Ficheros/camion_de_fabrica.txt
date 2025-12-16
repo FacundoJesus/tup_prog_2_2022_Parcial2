@@ -1,0 +1,14 @@
+﻿nroRegistro;modelo;precio
+100;Audi AA;20000
+100;Audi AA;10000
+110;Cronos TZ;150000
+110;Cronos TZ;253000
+110;Cronos TZ;2350
+120;Cronos Full;25300
+120;Cronos Full;100000
+120;Cronos Full;58200
+120;Cronos Full;589000
+130;Mobi;253655
+130;Mobi;12536
+130;Mobi;412523
+130;Mobi;458723
