@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2.Models
 {
-    internal class NuevoCliente
+    public class NuevoCliente
     {
     }
 }
