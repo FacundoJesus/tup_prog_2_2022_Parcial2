@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2.Models
 {
-    public class Ticket
+    public abstract class Ticket
     {
+
+        private int nroOrden;
+        private DateTime fechaHora;
+
+        public int VerNro()
+        {
+            return this.nroOrden;
+        }
+
+        public DateTime VerFechaHora() 
+        { 
+            return this.fechaHora;
+        }
+
     }
 }

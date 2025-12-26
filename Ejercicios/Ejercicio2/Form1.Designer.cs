@@ -31,10 +31,10 @@
             label1 = new Label();
             tbDNI = new TextBox();
             groupBox1 = new GroupBox();
-            rbDenuncia = new RadioButton();
-            rbNuevoCliente = new RadioButton();
-            tbPatente = new TextBox();
             cmbTipo = new ComboBox();
+            tbPatente = new TextBox();
+            rbNuevoCliente = new RadioButton();
+            rbDenuncia = new RadioButton();
             btnTicket = new Button();
             lsbTurnos = new ListBox();
             label2 = new Label();
@@ -74,16 +74,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipo de Consulta";
             // 
-            // rbDenuncia
+            // cmbTipo
             // 
-            rbDenuncia.AutoSize = true;
-            rbDenuncia.Location = new Point(6, 32);
-            rbDenuncia.Name = "rbDenuncia";
-            rbDenuncia.Size = new Size(75, 19);
-            rbDenuncia.TabIndex = 0;
-            rbDenuncia.TabStop = true;
-            rbDenuncia.Text = "Denuncia";
-            rbDenuncia.UseVisualStyleBackColor = true;
+            cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { "Auto", "Moto", "Equipo de Trabajo", "Bicicleta" });
+            cmbTipo.Location = new Point(126, 65);
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.Size = new Size(108, 23);
+            cmbTipo.TabIndex = 4;
+            // 
+            // tbPatente
+            // 
+            tbPatente.Location = new Point(126, 31);
+            tbPatente.Name = "tbPatente";
+            tbPatente.Size = new Size(108, 23);
+            tbPatente.TabIndex = 3;
             // 
             // rbNuevoCliente
             // 
@@ -96,20 +101,16 @@
             rbNuevoCliente.Text = "Nuevo Cliente";
             rbNuevoCliente.UseVisualStyleBackColor = true;
             // 
-            // tbPatente
+            // rbDenuncia
             // 
-            tbPatente.Location = new Point(126, 31);
-            tbPatente.Name = "tbPatente";
-            tbPatente.Size = new Size(108, 23);
-            tbPatente.TabIndex = 3;
-            // 
-            // cmbTipo
-            // 
-            cmbTipo.FormattingEnabled = true;
-            cmbTipo.Location = new Point(126, 65);
-            cmbTipo.Name = "cmbTipo";
-            cmbTipo.Size = new Size(108, 23);
-            cmbTipo.TabIndex = 4;
+            rbDenuncia.AutoSize = true;
+            rbDenuncia.Location = new Point(6, 32);
+            rbDenuncia.Name = "rbDenuncia";
+            rbDenuncia.Size = new Size(75, 19);
+            rbDenuncia.TabIndex = 0;
+            rbDenuncia.TabStop = true;
+            rbDenuncia.Text = "Denuncia";
+            rbDenuncia.UseVisualStyleBackColor = true;
             // 
             // btnTicket
             // 
@@ -119,6 +120,7 @@
             btnTicket.TabIndex = 3;
             btnTicket.Text = "Ticket";
             btnTicket.UseVisualStyleBackColor = true;
+            btnTicket.Click += btnTicket_Click;
             // 
             // lsbTurnos
             // 
@@ -164,6 +166,7 @@
             btnAtenderDenuncia.TabIndex = 8;
             btnAtenderDenuncia.Text = "Atender";
             btnAtenderDenuncia.UseVisualStyleBackColor = true;
+            btnAtenderDenuncia.Click += btnAtenderDenuncia_Click;
             // 
             // btnAtenderNuevoCliente
             // 
@@ -173,6 +176,7 @@
             btnAtenderNuevoCliente.TabIndex = 9;
             btnAtenderNuevoCliente.Text = "Atender";
             btnAtenderNuevoCliente.UseVisualStyleBackColor = true;
+            btnAtenderNuevoCliente.Click += btnAtenderNuevoCliente_Click;
             // 
             // Form1
             // 
@@ -192,6 +196,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Empresa de Seguros";
+            FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
